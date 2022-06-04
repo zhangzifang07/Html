@@ -1,0 +1,53 @@
+<!--
+	浮动：left:元素向左浮动；right：元素向右移动；none：默认值，元素不浮动；
+		一旦浮动，脱离标准文件流
+		块级元素只在本行浮动
+	解决边框塌陷：子集元素影响父级元素的高度
+			解决方案：1、父级元素定义高度
+					 2、clear属性可以消除塌陷
+	定位：
+		static：默认值，没有定位
+		relative:相对定位——相对于自己的初始化位置来定位，优先级高于文档流，没有脱离标准文档流
+		fixed：固定定位(固定在浏览器的某个位置，不随浏览器的上下滚动而动)
+		absolute:绝对定位：优先级高于文档流，脱离标准文档流，参照物：父级定位元素（内容区域最高到body）
+		
+	display
+	
+	1、为什么不提倡行内样式
+		（1）重复性代码过多，服务器传输，用户下载文件变多，
+		（2）行内样式优先级最高，不能用类选择去修改样式，可维护性很差
+	
+	
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>你好哇</title>
+		<style>
+		#d1{
+			float: left;
+		}
+		#d2{
+			float: left;
+		}
+		#d3{
+			clear: both;
+		}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<div id="d2"><li><img src="img/jd.png" width="200px"></li></div>
+			<div id="d2"><li><img src="img/jd.png" width="200px"></li></div>
+			<div id="d2"><li><img src="img/jd.png" width="200px"></li></div>
+			<div id="d2"><li><img src="img/jd.png" width="200px"></li></div>
+		<div id="d3">		
+			<div id="d1"><li><img src="img/jd.png" width="200px"></li></div>
+	 		<div id="d1"><li><img src="img/jd.png" width="200px"></li></div>
+			<div id="d1"><li><img src="img/jd.png" width="200px"></li></div>
+			<div id="d1"><li><img src="img/jd.png" width="200px"></li></div>	
+		</div>
+		</ul>
+	</body>
+</html>

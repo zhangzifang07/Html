@@ -1,0 +1,62 @@
+<!--思考总结问题解决的方案-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>你好哇</title>
+		
+	</head>
+	<body>
+		
+		<p><b>注意：</b>这是一个普通的表单</p>
+		<!--action提交地址，id可以唯一标识，name不唯一（先用后理解）-->
+		<form action="">
+			first name:<input type="text" name="firstname" ><br>
+			last name:<input type="text" name="lastname">
+		</form>
+		
+		<p><b>注意：</b>密码字段中的字符是可以隐藏的（显示为星号或圆圈）</p>
+		<form action="">
+			账户:<input type="text" name="user" ><br />
+			密码:<input type="password" name="password" />
+		</form>
+		
+		<p><b>注意：</b>这是一个单选题</p>
+		<form action="">
+			<!--单选选项，name需要重复，否则就可以多选，check可以实现默认选择-->
+			<input type="radio" name="sex" value="male" />男<br />
+			<input type="radio" name="sex" value="female" />女
+		</form>
+		
+		<p><b>注意：</b>这是一个复选框</p>
+		<form>
+			<!--checkbox实现复选功能，name可以重复或者没有，主要用于服务于后端-->
+			<input type="checkbox" name="vehicle" value="bike" />喜欢吃香蕉<br />
+			<input type="checkbox" name="happy" value="apple" />喜欢吃苹果
+		</form>
+		
+		<p><b>注意：</b>这是一个提交按钮</p>
+		<form name="input" action="biaodan.html" method="get">
+			账号:<input type="text" name="账号" size="20"/>
+			<br>
+			<input type="submit" value="submit" />
+			<input type="reset" value="reset"/>
+		</form>
+		
+		<p><b>注意：</b>这是一个列表框</p>
+		<!--年龄、日期、地区等选择时可以使用-->
+		<form name="input"  method="get">
+			<p>
+				版本：
+				<select name="bluRay" value="1">
+					<!--value：默认值、新值、后端值-->
+					<option value="2">jdk_1.8</option>
+					<option value="1">jdk_1.9</option>
+				</select>
+			</p>
+		</form>
+		
+		
+		
+	</body>
+</html>
